@@ -1,3 +1,6 @@
+.swiper-container {
+    background-color: #c61a10;
+}
 .tu1 {
     
 }
@@ -38,7 +41,8 @@
     left: 0;
     .riddle_content {
         width: 100%;
-        height: 474rem/@baseFontSize;
+        height: 0rem/@baseFontSize;
+        // height: 474rem/@baseFontSize;
         background: url(../images/riddle_content.png) no-repeat top center / 640rem/@baseFontSize 474rem/@baseFontSize;
         overflow: hidden;
         .wz_title {
@@ -62,12 +66,15 @@
         width: 100%;
     }
 }
+
 .start,.next {
     position: absolute;
     top: 800rem/@baseFontSize;
     right: 10rem/@baseFontSize;
     width: 324rem/@baseFontSize;
+    animation: big_small 1s linear infinite alternate;
 }
+
 ul{
     margin: 0;
     padding: 0;
@@ -86,5 +93,30 @@ ul{
             padding-top: 50rem/@baseFontSize;
             padding-left: 205rem/@baseFontSize;
         }
+    }
+}
+
+
+@keyframes riddle_ani {
+    0% {
+        height: 0rem/@baseFontSize;
+    }
+
+    100% {
+        height: 474rem/@baseFontSize;
+    }
+}
+
+.riddle_ani {
+    animation-name: riddle_ani;
+}
+
+@keyframes big_small {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
