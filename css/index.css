@@ -1,0 +1,450 @@
+@charset "UTF-8";
+@media (min-width: 320px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 56.25px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 58.59375px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 60px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 62.5px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 64.6875px;
+  }
+}
+@media (min-width: 424px) {
+  html {
+    font-size: 66.25px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 75px;
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 84.375px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 100px;
+  }
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+@font-face {
+  font-family: '方正清刻本悦宋简体';
+  src: url('../fonts/text1.TTF') format('truetype');
+}
+body {
+  background-color: #fff;
+  font-family: '方正清刻本悦宋简体';
+  color: #000;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+/*版心*/
+.h5_container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+[data-listenScroll="true"] {
+  display: none;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.swiper-container .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-container .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.swiper-container {
+  background-color: #c61a10;
+}
+.logo {
+  position: absolute;
+  top: 0.27rem;
+  left: 0.3rem;
+  width: 1.37rem;
+}
+.lamp_r {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.42rem;
+}
+.lamp_l {
+  position: absolute;
+  top: 1.6rem;
+  left: 0;
+  width: 1.33rem;
+}
+.lamp {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.lion_head {
+  width: 100%;
+  position: absolute;
+  top: 0.78rem;
+  left: 0;
+}
+.riddle {
+  width: 100%;
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+}
+.riddle .riddle_content {
+  width: 100%;
+  height: 0rem;
+  background: url(../images/riddle_content.png) no-repeat top center / 6.4rem 4.74rem;
+  overflow: hidden;
+}
+.riddle .riddle_content .wz_title {
+  font-size: 0.52rem;
+  line-height: 1.2;
+  padding-top: 0.9rem;
+  padding-left: 2.05rem;
+}
+.riddle .riddle_content .wz_content {
+  font-size: 0.42rem;
+  line-height: 1.8;
+  padding-top: 0.1rem;
+}
+.riddle .riddle_content .wz_content ul li {
+  padding-left: 2.62rem;
+}
+.riddle .riddle_bottom {
+  width: 100%;
+}
+.start,
+.next {
+  position: absolute;
+  top: 8rem;
+  right: 0.1rem;
+  width: 3.24rem;
+  animation: big_small 1s linear infinite alternate;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.screen1 .riddle_content .wz_title {
+  font-size: 0.68rem;
+  line-height: 1.2;
+  padding-top: 0.96rem;
+  padding-left: 2.05rem;
+}
+.screen1 .riddle_content .wz_content {
+  font-size: 0.42rem;
+  line-height: 1.2;
+  padding-top: 0.5rem;
+  padding-left: 2.05rem;
+}
+@keyframes riddle_ani {
+  0% {
+    height: 0rem;
+  }
+  100% {
+    height: 4.74rem;
+  }
+}
+.riddle_ani {
+  animation-name: riddle_ani;
+}
+@keyframes big_small {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.screen10 .tu2 {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 2.64rem;
+}
+.screen10 .tu3 {
+  position: absolute;
+  top: 3.1rem;
+  right: 0;
+  width: 1.63rem;
+}
+.screen10 .success {
+  display: none;
+}
+.screen10 .success .lion {
+  position: absolute;
+  top: 0.25rem;
+  right: 1.2rem;
+  width: 2.65rem;
+}
+.screen10 .success .msg {
+  position: absolute;
+  top: 3.7rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.34rem;
+  line-height: 1.3;
+}
+.screen10 .success .user_info {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+}
+.screen10 .success .user_info ul li {
+  height: 0.54rem;
+  line-height: 0.54rem;
+  background: url(../images/success_input.jpg) no-repeat top center / 4.22rem 0.54rem;
+  margin-bottom: 0.3rem;
+  padding-left: 2rem;
+  font-size: 0.24rem;
+}
+.screen10 .success .user_info ul li input {
+  margin: 0;
+  padding: 0;
+  width: 2.2rem;
+  height: 0.54rem;
+  line-height: 0.54rem;
+  background: transparent;
+}
+.screen10 .success .user_info .submit {
+  text-align: center;
+}
+.screen10 .success .user_info .submit span {
+  display: inline-block;
+  width: 1.5rem;
+  height: 0.54rem;
+  border-radius: 0.1rem;
+  line-height: 0.54rem;
+  text-align: center;
+  background-color: #ff9f34;
+}
+.screen10 .error {
+  display: none;
+}
+.screen10 .error .lion {
+  position: absolute;
+  top: 3rem;
+  left: 1.25rem;
+  width: 2.61rem;
+}
+.screen10 .error .msg {
+  position: absolute;
+  top: 5.6rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.34rem;
+  line-height: 1.3;
+}
+.screen10 .error .xuan {
+  position: absolute;
+  top: 6.7rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.screen10 .error .xuan img {
+  display: inline-block;
+  margin: 0 0.1rem;
+}
+.screen10 .error .xuan .again {
+  width: 1.94rem;
+}
+.screen10 .error .xuan .invitation {
+  width: 2.89rem;
+}
+.screen10 .fenxiang {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/*音乐*/
+#music {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.music_btn {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  z-index: 99999;
+  opacity: 0.5;
+}
+.music_btn img {
+  width: 100%;
+  height: 100%;
+}
+.music_on s {
+  display: block;
+  width: 9px;
+  height: 13px;
+  background: url(../images/icon_music.png) no-repeat scroll top left;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.music_on s:nth-child(1) {
+  -webkit-animation: music1 2s infinite;
+  animation: music1 2s infinite;
+}
+.music_on s:nth-child(2) {
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -webkit-animation: music2 2s 1s infinite;
+  animation: music2 2s 0.5s infinite;
+}
+.music_on s:nth-child(3) {
+  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  -webkit-animation: music3 2s 1.5s infinite;
+  animation: music3 2s 1.5s infinite;
+}
+@-webkit-keyframes music1 {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: -15px;
+    left: -15px;
+    opacity: 0;
+  }
+}
+@keyframes music1 {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: -15px;
+    left: -15px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes music2 {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: -20px;
+    left: -8px;
+    opacity: 0;
+  }
+}
+@keyframes music2 {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: -20px;
+    left: -8px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes music3 {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: -30px;
+    left: 2px;
+    opacity: 0;
+  }
+}
+@keyframes music3 {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: -30px;
+    left: 2px;
+    opacity: 0;
+  }
+}
+/*------------------------------*/
