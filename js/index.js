@@ -11,8 +11,8 @@ $(function () {
 
 	//音乐带动画
 	var pauseMark = true;
-	$(".music_btn").click(function() {
-		if(pauseMark) {
+	$(".music_btn").click(function () {
+		if (pauseMark) {
 			pauseMark = false;
 			$(this).children('img').attr('src', 'images/music_off.png');
 			$(this).removeClass('music_on');
@@ -28,8 +28,8 @@ $(function () {
 	function audioAutoPlay(id) {
 		var audio = document.getElementById(id);
 		audio.play();
-		document.addEventListener("WeixinJSBridgeReady", function() {
-			if(pauseMark) {
+		document.addEventListener("WeixinJSBridgeReady", function () {
+			if (pauseMark) {
 				audio.play();
 			}
 		}, false);
@@ -118,10 +118,10 @@ $(function () {
 	})
 
 	$('.error .invitation').on('click', function () {
-		$('.error .fenxiang').stop().fadeIn()
+		$('.fenxiang').stop().fadeIn()
 	})
 
-	$('.error .fenxiang').on('click', function () {
+	$('.fenxiang').on('click', function () {
 		$(this).stop().fadeOut()
 	})
 
@@ -129,12 +129,46 @@ $(function () {
 		var username = $('.username').val()
 		var userphone = $('.userphone').val()
 
-		if (!username || !userphone) {
-			mui.alert('请填写完整信息')
+		if (!username) {
+			mui.alert('请填写姓名')
 			return false
 		}
 
-		mui.alert('成功参与抽奖')
+		if (!userphone) {
+			mui.alert('请填写电话')
+			return false
+		}
+
+		if (!(/^[1][0-9]{10}$/.test(userphone))) {
+			mui.alert('请输入正确的手机号码')
+			return false
+		}
+
+		// $.ajax({
+		// 	type: "post",
+		// 	url: "http://h.uudiv.com/api/adduser.php",
+		// 	data: {
+		// 		name: name,
+		// 		phone: phone
+		// 	},
+		// 	dataType: 'json',
+		// 	beforeSend: function () {
+		// 		NProgress.start();
+		// 	},
+		// 	success: function (res) {
+		// 		mui.alert(res.message, '提示', '确认')
+		// 		if (res.success) {
+		// 			$('.screen7 .user').fadeOut()
+		// 		}
+		// 	},
+		// 	complete: function () {
+		// 		NProgress.done();
+		// 	}
+		// });
+
+		mui.alert('成功参与抽奖', '提示', '确定', function () {
+			$('.fenxiang').stop().fadeIn()
+		})
 	})
 
 })
