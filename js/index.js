@@ -1,13 +1,40 @@
 $(function () {
 	//音乐
+	// function audioAutoPlay(id) {
+	// 	var audio = document.getElementById(id);
+	// 	audio.play();
+	// 	document.addEventListener("WeixinJSBridgeReady", function () {
+	// 		audio.play();
+	// 	}, false);
+	// }
+	// audioAutoPlay('musicStar');
+
+	//音乐带动画
+	var pauseMark = true;
+	$(".music_btn").click(function() {
+		if(pauseMark) {
+			pauseMark = false;
+			$(this).children('img').attr('src', 'images/music_off.png');
+			$(this).removeClass('music_on');
+			$("#music")[0].pause();
+		} else {
+			$(this).children('img').attr('src', 'images/music_on.png');
+			$(this).addClass('music_on');
+			$("#music")[0].play();
+			pauseMark = true;
+		}
+	});
+
 	function audioAutoPlay(id) {
 		var audio = document.getElementById(id);
 		audio.play();
-		document.addEventListener("WeixinJSBridgeReady", function () {
-			audio.play();
+		document.addEventListener("WeixinJSBridgeReady", function() {
+			if(pauseMark) {
+				audio.play();
+			}
 		}, false);
 	}
-	audioAutoPlay('musicStar');
+	audioAutoPlay('music');
 
 	//swiper-container
 	var mySwiper = new Swiper('.swiper-container', {
@@ -81,9 +108,13 @@ $(function () {
 
 
 	$('.error .again').on('click', function () {
-		// mySwiper.slideTo(0)
-		// result_arr = []
-		history.go(0)
+		// history.go(0)
+		mySwiper.slideTo(0)
+		result_arr = []
+		$('.riddle_content .wz_content ul li').css('color', '#000')
+		$('.riddle_content .wz_content ul').attr('data-result', '')
+		$('.screen10 .success').hide()
+		$('.screen10 .error').hide()
 	})
 
 	$('.error .invitation').on('click', function () {
@@ -100,7 +131,10 @@ $(function () {
 
 		if (!username || !userphone) {
 			mui.alert('请填写完整信息')
+			return false
 		}
+
+		mui.alert('成功参与抽奖')
 	})
 
 })

@@ -193,13 +193,13 @@ ul{
         display: none;
         .lion {
             position: absolute;
-            top: 312rem/@baseFontSize;
+            top: 300rem/@baseFontSize;
             left: 125rem/@baseFontSize;
             width: 261rem/@baseFontSize;
         }
         .msg {
             position: absolute;
-            top: 565rem/@baseFontSize;
+            top: 560rem/@baseFontSize;
             left: 0;
             width: 100%;
             text-align: center;
@@ -208,19 +208,19 @@ ul{
         }
         .xuan {
             position: absolute;
-            top: 662rem/@baseFontSize;
+            top: 670rem/@baseFontSize;
             left: 0;
             width: 100%;
             text-align: center;
             img {
                 display: inline-block;
-                margin: 0 5rem/@baseFontSize;
+                margin: 0 10rem/@baseFontSize;
             }
             .again {
-                width: 155rem/@baseFontSize;
+                width: 194rem/@baseFontSize;
             }
             .invitation {
-                width: 230rem/@baseFontSize;
+                width: 289rem/@baseFontSize;
             }
         }
         .fenxiang {
@@ -233,3 +233,158 @@ ul{
         }
     }
 }
+
+
+/*音乐*/
+
+#music {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.music_btn {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    z-index: 99999;
+    opacity: 0.5;
+}
+
+.music_btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.music_on s {
+    display: block;
+    width: 9px;
+    height: 13px;
+    background: url(../images/icon_music.png) no-repeat scroll top left;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.music_on s:nth-child(1) {
+    -webkit-animation: music1 2s infinite;
+    animation: music1 2s infinite;
+}
+
+.music_on s:nth-child(2) {
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -webkit-animation: music2 2s 1s infinite;
+    animation: music2 2s 0.5s infinite;
+}
+
+.music_on s:nth-child(3) {
+    transform: rotate(50deg);
+    -webkit-transform: rotate(50deg);
+    -webkit-animation: music3 2s 1.5s infinite;
+    animation: music3 2s 1.5s infinite;
+}
+
+@-webkit-keyframes music1 {
+    0% {
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        top: -15px;
+        left: -15px;
+        opacity: 0;
+    }
+}
+
+@keyframes music1 {
+    0% {
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        top: -15px;
+        left: -15px;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes music2 {
+    0% {
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        top: -20px;
+        left: -8px;
+        opacity: 0;
+    }
+}
+
+@keyframes music2 {
+    0% {
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        top: -20px;
+        left: -8px;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes music3 {
+    0% {
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        top: -30px;
+        left: 2px;
+        opacity: 0;
+    }
+}
+
+@keyframes music3 {
+    0% {
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        top: -30px;
+        left: 2px;
+        opacity: 0;
+    }
+}
+
+
+/*------------------------------*/
