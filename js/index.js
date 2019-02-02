@@ -144,31 +144,32 @@ $(function () {
 			return false
 		}
 
-		// $.ajax({
-		// 	type: "post",
-		// 	url: "http://h.uudiv.com/api/adduser.php",
-		// 	data: {
-		// 		name: name,
-		// 		phone: phone
-		// 	},
-		// 	dataType: 'json',
-		// 	beforeSend: function () {
-		// 		NProgress.start();
-		// 	},
-		// 	success: function (res) {
-		// 		mui.alert(res.message, '提示', '确认')
-		// 		if (res.success) {
-		// 			$('.screen7 .user').fadeOut()
-		// 		}
-		// 	},
-		// 	complete: function () {
-		// 		NProgress.done();
-		// 	}
-		// });
+		$.ajax({
+			type: "post",
+			url: "http://h.uudiv.com/api/adduser.php",
+			data: {
+				name: username,
+				phone: userphone
+			},
+			dataType: 'json',
+			beforeSend: function () {
+				NProgress.start();
+			},
+			success: function (res) {
+				if (res.success) {
+					mui.alert('成功参与抽奖', '提示', '确定', function () {
+						$('.fenxiang').stop().fadeIn()
+					})
+				} else {
+					mui.alert(res.message, '提示', '确定')
+				}
+			},
+			complete: function () {
+				NProgress.done();
+			}
+		});
 
-		mui.alert('成功参与抽奖', '提示', '确定', function () {
-			$('.fenxiang').stop().fadeIn()
-		})
+
 	})
 
 })
