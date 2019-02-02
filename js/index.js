@@ -81,16 +81,24 @@ $(function () {
 
 
 	$('.error .again').on('click', function () {
-		mySwiper.slideTo(0)
+		// mySwiper.slideTo(0)
+		// result_arr = []
+		history.go(0)
+	})
+
+	$('.error .invitation').on('click', function () {
+		$('.error .fenxiang').stop().fadeIn()
+	})
+
+	$('.error .fenxiang').on('click', function () {
+		$(this).stop().fadeOut()
 	})
 
 	$('.screen10 .success .submit span').on('click', function () {
 		var username = $('.username').val()
 		var userphone = $('.userphone').val()
-		var useraddress = $('.useraddress').val()
-		var useridentity = $('.useridentity').val()
 
-		if (!username || !userphone || !useraddress || !useridentity) {
+		if (!username || !userphone) {
 			mui.alert('请填写完整信息')
 		}
 	})
